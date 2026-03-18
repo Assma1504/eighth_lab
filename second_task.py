@@ -12,21 +12,21 @@ userValue = input("let's start playing, enter a word, to count the score: ")
 sumPoints = 0
 
 for item in userValue:
-    
+    item = item.upper().strip()
     match item:
-        case one if item.upper() in myDict["onePoint"]:
+        case one if item in myDict["onePoint"]:
             sumPoints += 1
-        case two if item.upper() in myDict["twoPoints:"]:
+        case two if item in myDict["twoPoints:"]:
             sumPoints += 2
-        case three if item.upper() in myDict["threePoints:"]:
+        case three if item in myDict["threePoints:"]:
             sumPoints += 3
-        case four if item.upper() in myDict["fourPoints:"]:
+        case four if item in myDict["fourPoints:"]:
             sumPoints += 4
-        case five if item.upper() in myDict["fivePoints:"]:
+        case five if item in myDict["fivePoints:"]:
             sumPoints +=5
-        case eight if item.upper() in myDict["eightPoints:"]:
+        case eight if item in myDict["eightPoints:"]:
             sumPoints += 8
-        case ten if item.upper() in myDict["tenPoints:"]:
+        case ten if item in myDict["tenPoints:"]:
             sumPoints += 10
         case _:
             sumPoints = 0
